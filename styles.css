@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  background-image: url(JS_ico.ico);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.console * {
+  font-family: monospace;
+}
+
+.console {
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #11111170;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.50), 0 0 0 2px rgba(0, 0, 0, 0.70);
+  /* animation: box-shadow 1000ms ease-out forwards; */
+  transition: all 500ms ease-out, box-shadow 500ms ease-out;
+}
+
+.console:hover {
+  scale: 1.1;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.50), 0 0 0 2px rgba(0, 0, 0, 0.70);
+}
+
+.console-history {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.console-input-log,
+.console-output-log {
+  box-sizing: border-box;
+  padding: 6px 12px;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
+.console-input-log:hover,
+.console-output-log:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.console-input-log {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.console-output-log {
+  color: #00ff88;
+}
+
+.console-input {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 12px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 0px 1px #161616;
+  color: #ffffff;
+  background: #1d1d1d70;
+  transition: background 0.2s;
+  margin: 5px 10px;
+  margin-bottom: 7px;
+  margin-right: calc(10vh - 40px);
+  width: 96%;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.console-input:hover,
+.console-input:focus {
+  background: #22222270;
+}
+
+.input-section {
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 10vh;
+  align-items: right;
+  justify-content: right;
+  background: rgba(255, 255, 255, 0.1);
+  padding-top: 5px;
+  display: flex;
+  border-radius: 10px;
+}
+
+span {
+  padding-top: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000030;
+  margin-block: 5px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00000055;
+  border-radius: 20px;
+  border: .10em solid #00ff0010;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00000066;
+}
+
+@keyframes box-shadow {
+  0% {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.70);
+  }
+
+  100% {
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.70), 0 0 0 2px rgba(0, 0, 0, 0.70);
+  }
+}
